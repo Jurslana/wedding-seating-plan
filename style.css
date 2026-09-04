@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+}
+
+@media print {
+    /* ukrywamy przyciski i rzeczy, których nie chcemy w PDF */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f3ef;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+.room {
+    width: 1200px;
+    height: 1400px;
+    margin: 30px auto;
+    border: 3px solid black;
+    position: relative;
+    
+}
+
+.table {
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    position: absolute;
+    transform: translateX(150px);
+    
+}
+
+.table-1 {
+    width: 500px;
+    height: 120px;
+    top: 40px;
+    left: 200px;
+    transform: translate(150px, 70px);
+}
+
+
+.table-2,
+.table-3,
+.table-4,
+.table-5,
+.table-6 {
+    width: 120px;
+    height: 500px;
+    transform: translateX(150px);
+}
+
+.table-2 {
+    left: 370px;
+    top: 180px;
+    transform: translate(430px, 90px);
+}
+
+.table-3 {
+    left: 80px;
+    top: 180px;
+     transform: translate(170px, 90px);
+}
+
+.table-4 {
+    left: 370px;
+    top: 760px;
+    transform: translate(430px, 90px);
+}
+
+.table-5 {
+    left: 370px;
+    top: 180px;
+    transform: translate(430px, 90px);
+}
+
+.table-6 {
+left: 80px;
+top: 260px;
+transform: translate(170px, 90px);;
+}
+
+
+
+/* MIEJSCA */
+
+.seat {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.seat-number {
+    width: 28px;
+    height: 28px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.seat input {
+    width: 150px;
+    padding: 6px 8px;
+
+    border: 1px solid #999;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+
+/* MIEJSCA STOŁU 1 */
+
+.table-1 .seat {
+    top: -75px;
+    flex-direction: column-reverse;
+    gap: 6px;
+}
+
+.table-1 .seat-1 {
+     left: -20px;
+}
+
+.table-1 .seat-2 {
+     left: 135px;
+}
+
+.table-1 .seat-3 {
+    left: 290px;
+}
+
+.table-1 .seat-4 {
+    left: 445px;
+}
+
+
+/* MIEJSCA STOŁÓW PIONOWYCH */
+
+.table-2 .seat,
+.table-3 .seat,
+.table-4 .seat,
+.table-5 .seat,
+.table-6 .seat{
+    flex-direction: row;
+}
+
+
+/* lewa strona */
+
+.table-2 .seat.left,
+.table-3 .seat.left,
+.table-4 .seat.left,
+.table-5 .seat.left,
+.table-6 .seat.left{
+    left: -180px;
+    flex-direction: row-reverse;
+}
+
+
+/* prawa strona */
+
+.table-2 .seat.right,
+.table-3 .seat.right,
+.table-4 .seat.right,
+.table-5 .seat.right,
+.table-6 .seat.right {
+    right: -180px;
+}
+
+
+/* odległość między siedzeniami */
+
+.table-2 .seat,
+.table-3 .seat,
+.table-4 .seat,
+.table-5 .seat,
+.table-6 .seat{
+    top: 15px;
+}
+
+.table-2 .seat:nth-child(2),
+.table-3 .seat:nth-child(2),
+.table-4 .seat:nth-child(2),
+.table-5 .seat:nth-child(2),
+.table-6 .seat:nth-child(2){
+    top: 82px;
+}
+
+.table-2 .seat:nth-child(3),
+.table-3 .seat:nth-child(3),
+.table-4 .seat:nth-child(3),
+.table-5 .seat:nth-child(3),
+.table-6 .seat:nth-child(3){
+    top: 149px;
+}
+
+.table-2 .seat:nth-child(4),
+.table-3 .seat:nth-child(4),
+.table-4 .seat:nth-child(4), 
+.table-5 .seat:nth-child(4),
+.table-6 .seat:nth-child(4){
+    top: 216px;
+}
+
+.table-2 .seat:nth-child(5),
+.table-3 .seat:nth-child(5),
+.table-4 .seat:nth-child(5),
+.table-5 .seat:nth-child(5),
+.table-6 .seat:nth-child(5){
+    top: 283px;
+}
+
+.table-2 .seat:nth-child(6),
+.table-3 .seat:nth-child(6),
+.table-4 .seat:nth-child(6),
+.table-5 .seat:nth-child(6),
+.table-6 .seat:nth-child(6){
+    top: 350px;
+}
+
+.table-2 .seat:nth-child(7),
+.table-3 .seat:nth-child(7),
+.table-4 .seat:nth-child(7),
+.table-5 .seat:nth-child(7),
+.table-6 .seat:nth-child(7){
+    top: 417px;
+}
+
+.table-2 .seat:nth-child(8),
+.table-3 .seat:nth-child(8),
+.table-4 .seat:nth-child(8),
+.table-5 .seat:nth-child(8),
+.table-6 .seat:nth-child(8){
+    top: 15px;
+}
+
+.table-2 .seat:nth-child(9),
+.table-3 .seat:nth-child(9),
+.table-4 .seat:nth-child(9), 
+.table-5 .seat:nth-child(9),
+.table-6 .seat:nth-child(9){
+    top: 82px;
+}
+
+.table-2 .seat:nth-child(10),
+.table-3 .seat:nth-child(10),
+.table-4 .seat:nth-child(10),
+.table-5 .seat:nth-child(10),
+.table-6 .seat:nth-child(10){
+    top: 149px;
+}
+
+.table-2 .seat:nth-child(11),
+.table-3 .seat:nth-child(11),
+.table-4 .seat:nth-child(11),
+.table-5 .seat:nth-child(11),
+.table-6 .seat:nth-child(11){
+    top: 216px;
+}
+
+.table-2 .seat:nth-child(12),
+.table-3 .seat:nth-child(12),
+.table-4 .seat:nth-child(12),
+.table-5 .seat:nth-child(12),
+.table-6 .seat:nth-child(12){
+    top: 283px;
+}
+
+.table-2 .seat:nth-child(13),
+.table-3 .seat:nth-child(13),
+.table-4 .seat:nth-child(13),
+.table-5 .seat:nth-child(13),
+.table-6 .seat:nth-child(13){
+    top: 350px;
+}
+
+.table-2 .seat:nth-child(14),
+.table-3 .seat:nth-child(14),
+.table-4 .seat:nth-child(14),
+.table-5 .seat:nth-child(14),
+.table-6 .seat:nth-child(14){
+    top: 417px;
+}
+

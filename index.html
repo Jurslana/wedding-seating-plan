@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weeding-seating-plan</title>
+</head>
+<body>
+
+    <div class="navigation">
+    <button id="showRoom1">Sala 1</button>
+    <button id="showRoom2">Sala 2</button>
+
+</div>
+    
+
+    <button onclick="window.print()">🖨️ Zapisz jako PDF</button>
+    <button id="clearPlan">🗑️ Wyczyść plan</button>
+
+ <section id="room1">
+    <h3>Sala nr.1</h3>
+    <div class="room room-1">
+
+        <div class="table table-1">
+            <span> Stół 1</span>
+            <div class="seats"></div>
+        </div>
+
+        <div class="table table-2">
+            <span> Stół 2</span>
+            <div class="seats"></div>
+        </div>
+
+        <div class="table table-3">
+            <span> Stół 3</span>
+            <div class="seats"></div>
+        </div>
+
+        <div class="table table-4">
+            <span> Stół 4</span>
+            <div class="seats"></div>
+        </div>
+
+    </div> 
+</section>
+
+    <!-- SALA 2 -->
+
+    <section id="room2" style="display: none;">
+
+        <h3>Sala nr. 2</h3>
+
+        <div class="room room-2">
+
+            <div class="table table-5">
+                <span>Stół 5</span>
+                <div class="seats"></div>
+            </div>
+
+            <div class="table table-6">
+                <span>Stół 6</span>
+                <div class="seats"></div>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
