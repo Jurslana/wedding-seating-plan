@@ -6,7 +6,7 @@ tables.forEach((table, tableIndex) => {
 
     const seatsContainer = table.querySelector(".seats");
 
-    const numberOfSeats = tableIndex === 0 ? 4 : 14;
+    const numberOfSeats = tableIndex === 0 ? 6 : 14;
 
     for (let i = 0; i < numberOfSeats; i++) {
 

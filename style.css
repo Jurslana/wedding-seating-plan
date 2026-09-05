@@ -46,6 +46,13 @@ h3 {
     transform: translate(150px, 70px);
 }
 
+.table-1 .seat {
+    top: -85px;
+    flex-direction: column-reverse;
+    transform: translateX(-105px);
+    gap: 6px;
+}
+
 
 .table-2,
 .table-3,
@@ -128,28 +135,29 @@ transform: translate(170px, 90px);;
 
 /* MIEJSCA STOŁU 1 */
 
-.table-1 .seat {
-    top: -75px;
-    flex-direction: column-reverse;
-    gap: 6px;
-}
-
 .table-1 .seat-1 {
-     left: -20px;
+    left: -230px;
 }
 
 .table-1 .seat-2 {
-     left: 135px;
+    left: -30px;
 }
 
 .table-1 .seat-3 {
-    left: 290px;
+    left: 170px;
 }
 
 .table-1 .seat-4 {
-    left: 445px;
+    left: 370px;
 }
 
+.table-1 .seat-5 {
+    left: 570px;
+}
+
+.table-1 .seat-6 {
+    left: 770px;
+}
 
 /* MIEJSCA STOŁÓW PIONOWYCH */
 
