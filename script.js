@@ -2,11 +2,25 @@ const tables = document.querySelectorAll(".table");
 
 let seatNumber = 1;
 
-tables.forEach((table, tableIndex) => {
+tables.forEach((table) => {
 
     const seatsContainer = table.querySelector(".seats");
 
-    const numberOfSeats = tableIndex === 0 ? 6 : 14;
+    let numberOfSeats;
+
+    // Stół 1 = 6 miejsc
+    if (table.classList.contains("table-1")) {
+        numberOfSeats = 6;
+
+    // Stół 2 = połączone stoły 2 + 4 = 28 miejsc
+    } else if (table.classList.contains("table-2")) {
+        numberOfSeats = 28;
+
+    // Wszystkie pozostałe stoły = 14 miejsc
+    } else {
+        numberOfSeats = 14;
+    }
+
 
     for (let i = 0; i < numberOfSeats; i++) {
 
@@ -20,20 +34,32 @@ tables.forEach((table, tableIndex) => {
         input.type = "text";
         input.placeholder = "Imię i nazwisko";
 
+        // Numer miejsca
         seatNumberElement.textContent = seatNumber;
 
-        if (tableIndex === 0) {
+
+        // STÓŁ 1
+        if (table.classList.contains("table-1")) {
 
             seat.classList.add(`seat-${i + 1}`);
 
-        } else {
+        }
 
-            if (i < 7) {
+        // POZOSTAŁE STOŁY
+        else {
+
+            // Pierwsze pół miejsc po lewej
+            if (i < numberOfSeats / 2) {
                 seat.classList.add("left");
-            } else {
+            }
+
+            // Drugie pół miejsc po prawej
+            else {
                 seat.classList.add("right");
             }
+
         }
+
 
         seat.appendChild(seatNumberElement);
         seat.appendChild(input);
@@ -44,6 +70,8 @@ tables.forEach((table, tableIndex) => {
     }
 });
 
+
+// ZAPISYWANIE IMION I NAZWISK
 
 const inputs = document.querySelectorAll(".seat input");
 
@@ -61,6 +89,9 @@ inputs.forEach((input, index) => {
 
 });
 
+
+// WYCZYŚĆ PLAN
+
 document.getElementById("clearPlan").addEventListener("click", () => {
 
     const confirmClear = confirm("Czy na pewno chcesz wyczyścić cały plan?");
@@ -72,22 +103,22 @@ document.getElementById("clearPlan").addEventListener("click", () => {
 
 });
 
-document.getElementById("showRoom1").addEventListener("click", () => {
-    document.getElementById("room1").style.display = "block";
-    document.getElementById("room2").style.display = "none";
-});
 
-document.getElementById("showRoom2").addEventListener("click", () => {
-    document.getElementById("room1").style.display = "none";
-    document.getElementById("room2").style.display = "block";
-});
+// SALA 1
 
 document.getElementById("showRoom1").addEventListener("click", () => {
+
     document.getElementById("room1").style.display = "block";
     document.getElementById("room2").style.display = "none";
+
 });
 
+
+// SALA 2
+
 document.getElementById("showRoom2").addEventListener("click", () => {
+
     document.getElementById("room1").style.display = "none";
     document.getElementById("room2").style.display = "block";
+
 });
